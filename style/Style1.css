@@ -7,3 +7,41 @@ h3{
 table{
     border: 1px solid #f80a81;
 }
+#item_save{
+    display: flex;
+    background-color: green;
+}
+#item_delete{
+    display: flex;
+    background-color: red;
+
+}
+#item_update{
+    display: flex;
+    background-color: blue;
+
+}
+#item_reset{
+    display: flex;
+    background-color: #ffc42f;
+
+}
+#customer_save{
+    display: flex;
+    background-color: green;
+}
+#customer_delete{
+    display: flex;
+    background-color: red;
+
+}
+#customer_update{
+    display: flex;
+    background-color: blue;
+
+}
+#customer_reset{
+    display: flex;
+    background-color: #ffc42f;
+
+}

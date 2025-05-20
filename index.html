@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,46 +11,9 @@
 </head>
 <body>
 
-<!-- nav bar-->
-<!--<nav class="navbar navbar-expand-lg bg-body-tertiary">-->
-<!--    <div class="container-fluid">-->
-<!--        <a class="navbar-brand" href="#"><img src="assets/images/28759414.jpg" width="50px">Curv Pos System</a>-->
-<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--            <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-<!--        <div class="collapse navbar-collapse" id="navbarNavDropdown">-->
-<!--            <ul class="navbar-nav">-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link active" aria-current="page" href="#" id="home_nav">Home</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#" id="customer_nav">Customers</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#">Orders</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#" >Items</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item dropdown">-->
-<!--                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
-<!--                        Others-->
-<!--                    </a>-->
-<!--                    <ul class="dropdown-menu">-->
-<!--                        <li><a class="dropdown-item" href="#">Employees</a></li>-->
-<!--                        <li><a class="dropdown-item" href="#">Customers</a></li>-->
-<!--                        <li><a class="dropdown-item" href="#">Settings</a></li>-->
-<!--                        <li><a class="dropdown-item" href="#">About</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</nav>-->
-
 <!--nav bar-->
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="assets/images/28759414.jpg" width="50px">Curv Pos System</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,23 +22,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#" id="home_nav">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Customer</a>
+                    <a class="nav-link" href="#" id="customer_nav">Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Order</a>
+                    <a class="nav-link" href="#" id="item_nav">Item</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Item</a>
+                    <a class="nav-link" href="#" id="order_nav">Order</a>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Others
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Customers</a></li>
+                        <li><a class="dropdown-item" href="#" id="customer_dropdown">Customers</a></li>
                         <li><a class="dropdown-item" href="#">Employees</a></li>
                         <li><a class="dropdown-item" href="#">Settings</a></li>
                         <li><a class="dropdown-item" href="#">About</a></li>
@@ -111,7 +77,7 @@
         <br><br>
         <div class="row text-center">
 
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3" id="customer_div">
                 <div class="card border-secondary mb-3" style="max-width: 18rem;" >
                     <div class="card-header">Customers</div>
                     <div class="card-body">
@@ -123,7 +89,7 @@
             </div>
 
 
-            <div class="col-16 col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3">
+            <div class="col-16 col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3" id="item_div">
                 <div class="card border-secondary mb-3" style="max-width: 18rem;" >
                     <div class="card-header">Items</div>
                     <div class="card-body">
@@ -134,7 +100,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3" id="order_div">
                 <div class="card border-secondary mb-3" style="max-width: 18rem;" >
                     <div class="card-header">My Orders</div>
                     <div class="card-body">
@@ -170,13 +136,12 @@
             <div class="card-body">
                 <h5 class="card-title" style="background-color: #f80a81">Customer Search</h5>
                 <div class="input-group flex-nowrap">
-                    <input type="text" class="form-control" aria-describedby="addon-wrapping" placeholder="Input Item Name/Nic/Tp here">
+                    <input type="text" class="form-control" aria-describedby="addon-wrapping" placeholder="Input Customer Name" id="customer_search_input">
                 </div>
                 <br>
 
 
-                <button type="button" class="btn btn-primary"
-                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" id="customer_search_btn">
                     Search
                 </button>
                 <br><br>
@@ -197,51 +162,70 @@
 
         <br>
 
-        <button type="button" class="btn btn-success">Save</button>
         <button type="button" class="btn btn-info">Update</button>
         <button type="button" class="btn btn-danger">Delete</button>
         <button type="button" class="btn btn-warning">Reset</button>
-        <button type="button" class="btn btn-primary"
-                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-            New Customer
+        <!-- Button -->
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCard">
+            +New Customer
         </button>
+
+        <!-- Collapsible Card -->
+        <div class="collapse mt-3" id="collapseCard" >
+            <div class="card card-body w-50">
+                <h5 class="card-title" style="background-color: #f80a81">Register New Customer</h5>
+
+                <!--                <div class="mb-3">-->
+                <!--                    <label for="exampleInputCustomerId" class="form-label">Customer Id</label>-->
+                <!--                    <input type="text" class="form-control" id="exampleInputCustomerId">-->
+                <!--                </div>-->
+
+                <div class="mb-3">
+                    <label for="exampleInputName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="exampleInputName">
+                    <small id="customerNameError" class="text-danger"></small>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputCustomerAddress" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="exampleInputCustomerAddress">
+                    <small id="addressError" class="text-danger"></small>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputContactNumber" class="form-label">Contact Number</label>
+                    <input type="text" class="form-control" id="exampleInputContactNumber">
+                    <small id="contactError" class="text-danger"></small>
+                </div>
+
+                <div class="d-flex justify-content-between gap-2" style="max-width: 320px;">
+                    <button type="button" class="btn btn-success" id="customer_save" style="width: 100px;">Save</button>
+                    <button type="button" class="btn btn-success" id="customer_update" style="width: 100px;">Update</button>
+                    <button type="button" class="btn btn-success" id="customer_delete" style="width: 100px;">Delete</button>
+                    <button type="button" class="btn btn-success" id="customer_reset" style="width: 100px;">Reset</button>
+                </div>
+            </div>
+        </div>
+
         <button type="button" class="btn btn-primary"
                 style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
             View All Customers
         </button>
         <br><br>
 
+        <table class="table table-bordered border-secondary">
+            <thead>
+            <tr>
+                <th scope="col">Customer Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact Number</th>
+            </tr>
+            </thead>
+            <tbody id="customer-tbody">
 
-            <table class="table table-bordered border-secondary">
-                <thead>
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Salary</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>@social</td>
-                </tr>
-                </tbody>
-            </table>
+            </tbody>
+        </table>
 
     </form>
 
@@ -278,14 +262,56 @@
         </div>
         <br>
 
-        <button type="button" class="btn btn-success">Save</button>
         <button type="button" class="btn btn-info">Update</button>
         <button type="button" class="btn btn-danger">Delete</button>
         <button type="button" class="btn btn-warning">Reset</button>
-        <button type="button" class="btn btn-primary"
-                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-            New Item
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCardItem">
+            +New Item
         </button>
+
+        <!-- Collapsible Card -->
+        <div class="collapse mt-3" id="collapseCardItem" >
+            <div class="card card-body w-50">
+                <h5 class="card-title" style="background-color: #f80a81">Add New Item</h5>
+
+                <!--                <div class="mb-3">-->
+                <!--                    <label for="exampleInputCustomerId" class="form-label">Customer Id</label>-->
+                <!--                    <input type="text" class="form-control" id="exampleInputCustomerId">-->
+                <!--                </div>-->
+                <div class="mb-3">
+                    <label for="exampleInputCode" class="form-label">Item Code</label>
+                    <input type="text" class="form-control" id="exampleInputCode">
+                    <small id="codeError" class="text-danger"></small><br>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputItemName" class="form-label">Item Name</label>
+                    <input type="text" class="form-control" id="exampleInputItemName">
+                    <small id="nameError" class="text-danger"></small><br>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputItemPrice" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="exampleInputItemPrice">
+                    <small id="priceError" class="text-danger"></small><br>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputItemQuantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="exampleInputItemQuantity">
+                    <small id="quantityError" class="text-danger"></small><br>
+                </div>
+
+                <div class="d-flex justify-content-between gap-2" style="max-width: 320px;">
+                    <button type="button" class="btn btn-success" id="item_save" style="width: 100px;">Save</button>
+                    <button type="button" class="btn btn-success" id="item_update" style="width: 100px;">Update</button>
+                    <button type="button" class="btn btn-success" id="item_delete" style="width: 100px;">Delete</button>
+                    <button type="button" class="btn btn-success" id="item_reset" style="width: 100px;">Reset</button>
+                </div>
+
+            </div>
+        </div>
         <button type="button" class="btn btn-primary"
                 style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
             View All Items
@@ -302,208 +328,375 @@
                 <th scope="col">Quantity</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>John</td>
-                <td>Doe</td>
-                <td>@social</td>
-            </tr>
+            <tbody id="item-tbody">
+
             </tbody>
         </table>
 
     </form>
 </section>
 
-<section id="order_content" >
+<!--order form-->
+
+<!--<section id="order_content" >-->
+<!--    <form id="order_form" class="mx-auto" style="width: 1000px;">-->
+<!--        <h3>Orders</h3>-->
+<!--        <div class="row">-->
+<!--            <div class="col-12 col-xl-6">-->
+
+<!--                <div class="card">-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title" style="background-color: #f80a81">Invoice Details</h5>-->
+
+<!--&lt;!&ndash;                        <div class="mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <label class="form-label">Order Id</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                            &ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="dropdown">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: 1px solid #dfdddd" >&ndash;&gt;-->
+<!--&lt;!&ndash;                                    C001&ndash;&gt;-->
+<!--&lt;!&ndash;                                </button>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <ul class="dropdown-menu">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <li><a class="dropdown-item" href="#">C002</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <li><a class="dropdown-item" href="#">C003</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <li><a class="dropdown-item" href="#">C004</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+
+<!--                        <div class="mb-3">-->
+<!--                            <label for="exampleInputOrderId" class="form-label">Order Id</label>-->
+<!--                            <input type="text" class="form-control" id="exampleInputOrderId" style="width: 150px">-->
+<!--                        </div>-->
+
+<!--                        <div class="mb-3">-->
+<!--                            <label for="exampleInputDate" class="form-label">Date</label>-->
+<!--                            <input type="date" class="form-control" id="exampleInputDate" style="width: 150px">-->
+<!--                        </div>-->
+
+<!--                        <div class="mb-3">-->
+<!--                            <label class="form-label">Customer</label>-->
+<!--                            <div class="dropdown">-->
+<!--                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: 1px solid #dfdddd" ></button>-->
+<!--                                <ul class="dropdown-menu">-->
+<!--&lt;!&ndash;                                    <li><a class="dropdown-item" href="#">C002</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <li><a class="dropdown-item" href="#">C003</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <li><a class="dropdown-item" href="#">C004</a></li>&ndash;&gt;-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="mb-3">-->
+<!--                            <label for="exampleInputCustomerName" class="form-label">Name</label>-->
+<!--                            <input type="text" class="form-control" id="exampleInputCustomerName">-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label for="exampleInputAddress" class="form-label">Address</label>-->
+<!--                            <input type="text" class="form-control" id="exampleInputAddress">-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label for="exampleInputPhone" class="form-label">Contact Number</label>-->
+<!--                            <input type="text" class="form-control" id="exampleInputPhone">-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <div class="col-12 col-xl-6">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title" style="background-color: #f80a81">Item Select</h5>-->
+
+<!--                        <div class="mb-3">-->
+<!--                            <label class="form-label">Item</label>-->
+<!--                            <div class="dropdown">-->
+<!--                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border:1px solid #dfdddd"></button>-->
+<!--                                <ul class="dropdown-menu">-->
+<!--                                    <li><a class="dropdown-item" href="#">Coca Cola-1.5L</a></li>-->
+<!--                                    <li><a class="dropdown-item" href="#">Newdale Yoghurt</a></li>-->
+<!--                                    <li><a class="dropdown-item" href="#">Kothmale</a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="mb-3">-->
+<!--                            <label for="exampleInputItemCode" class="form-label">Item Code</label>-->
+<!--                            <input type="text" class="form-control" id="exampleInputItemCode">-->
+<!--                        </div>-->
+<!--                        <div class="d-flex gap-3">-->
+<!--                            <div class="mb-3">-->
+<!--                                <label for="exampleInputItemNme" class="form-label">Item Name</label>-->
+<!--                                <input type="text" class="form-control" id="exampleInputItemNme">-->
+<!--                            </div>-->
+<!--                            <div class="mb-3" >-->
+<!--                                <label for="exampleInputPrice" class="form-label">Price</label>-->
+<!--                                <input type="text" class="form-control" id="exampleInputPrice">-->
+<!--                            </div>-->
+<!--                            <div class="mb-3">-->
+<!--                                <label for="exampleInputQty" class="form-label">Quantity On Hand</label>-->
+<!--                                <input type="number" class="form-control" id="exampleInputQty">-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="mb-3">-->
+<!--                            <label for="exampleInputOrderQty" class="form-label">Order Quantity</label>-->
+<!--                            <input type="number" class="form-control" id="exampleInputOrderQty">-->
+<!--                        </div>-->
+<!--                        <button type="button" class="btn btn-danger">Add Item</button>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <br>-->
+<!--            <br>-->
+<!--            <div class="card" style="background-color: #dfdddd">-->
+<!--                <div class="card-body">-->
+<!--                    <h4 class="card-title">Total Rs 0.00/=</h4>-->
+<!--                    <h4 class="card-title">Sub Total Rs 0.00/=</h4>-->
+<!--                    <div class="row g-3">-->
+<!--                        <div class="col-sm-7">-->
+<!--                            <input type="text" class="form-control" placeholder="Cash" aria-label="City">-->
+<!--                        </div>-->
+<!--                        <div class="col-sm">-->
+<!--                            <input type="text" class="form-control" placeholder="Discount" aria-label="State">-->
+<!--                        </div>-->
+<!--                        <div class="col-sm">-->
+<!--                            <input type="text" class="form-control" placeholder="Balance" aria-label="Zip">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <br>-->
+<!--                    <button type="button" class="btn btn-success" id="purchase-btn" style="width: 100px">Purchase</button>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <table class="table table-bordered border-secondary">-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th scope="col">Item Name</th>-->
+<!--                <th scope="col">Price</th>-->
+<!--                <th scope="col">Quantity</th>-->
+<!--                <th scope="col">Total</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody id="order-tbody">-->
+
+<!--            </tbody>-->
+<!--        </table>-->
+
+<!--    </form>-->
+<!--</section>-->
+
+<section id="order_content">
     <form id="order_form" class="mx-auto" style="width: 1000px;">
-        <h3>Orders</h3>
-            <div class="row">
-                <div class="col-12 col-xl-6">
+        <h3 class="mb-4">Orders</h3>
 
-                <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title" style="background-color: #f80a81">Customer Details</h5>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Customer</label>
-                                    <div class="dropdown">
-                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: 1px solid #dfdddd" >
-                                            C001
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">C002</a></li>
-                                            <li><a class="dropdown-item" href="#">C003</a></li>
-                                            <li><a class="dropdown-item" href="#">C004</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="exampleInputAddress" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="exampleInputAddress">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputTel" class="form-label">Tel</label>
-                                    <input type="tel" class="form-control" id="exampleInputTel">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputCreditLimit" class="form-label">Credit Limit</label>
-                                    <input type="number" class="form-control" id="exampleInputCreditLimit">
-                                </div>
-
-                        </div>
-                    </div>
-            </div>
-                <br>
-                <div class="col-12 col-xl-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title" style="background-color: #f80a81">Item Select</h5>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Item</label>
-                                    <div class="dropdown">
-                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border:1px solid #dfdddd" >
-                                            Sprite-1L
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Coca Cola-1.5L</a></li>
-                                            <li><a class="dropdown-item" href="#">Newdale Yoghurt</a></li>
-                                            <li><a class="dropdown-item" href="#">Kothmale</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="exampleInputPrice" class="form-label">Price</label>
-                                    <input type="number" class="form-control" id="exampleInputPrice">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputQuantity" class="form-label">Quantity</label>
-                                    <input type="number" class="form-control" id="exampleInputQuantity">
-                                </div>
-                                <h5>Order Item</h5>
-                                <div class="mb-3">
-                                    <label for="exampleInputOrderQuantity" class="form-label">Order Quantity</label>
-                                    <input type="number" class="form-control" id="exampleInputOrderQuantity">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputCreditLimitt" class="form-label">Credit Limit</label>
-                                    <input type="number" class="form-control" id="exampleInputCreditLimitt">
-                                </div>
-                                <button type="button" class="btn btn-danger">Place Order</button>
-
-                        </div>
-                    </div>
-                </div>
-
-                <br>
-
-                <div class="row">
-                    <div class="col-12 col-md-12 col-lg-6">
-                <div class="card">
+        <div class="row">
+            <!-- Left: Invoice Details -->
+            <div class="col-12 col-xl-6">
+                <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title" style="background-color: #f80a81">Invoice Details</h5>
-                            <div class="mb-3">
-                                <label for="exampleInputDate" class="form-label">Date</label>
-                                <input type="date" class="form-control" id="exampleInputDate">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputOrderId" class="form-label">Order Id</label>
-                                <input type="text" class="form-control" id="exampleInputOrderId">
-                            </div>
 
-                    </div>
-                    </div>
+                        <div class="mb-3">
+                            <label for="exampleInputOrderId" class="form-label">Order Id</label>
+                            <input type="text" class="form-control" id="exampleInputOrderId" style="width: 150px;">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputDate" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="exampleInputDate" style="width: 150px;">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Customer Id</label>
+                            <select id="customerSelect" class="form-select" style="width: 200px;">
+                                <option value=""></option>
+                                <!-- Options will be populated by JS -->
+                            </select>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="exampleInputCustomerName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="exampleInputCustomerName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="exampleInputAddress">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPhone" class="form-label">Contact Number</label>
+                            <input type="text" class="form-control" id="exampleInputPhone">
+                        </div>
                     </div>
                 </div>
             </div>
-                <br>
-                <table class="table table-bordered border-secondary">
-                    <thead>
-                    <tr>
-                        <th scope="col">Item Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Total</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>@social</td>
-                    </tr>
-                    </tbody>
-                </table>
 
-        <div class="card" style="background-color: #dfdddd">
-            <div class="card-body">
-                <h4 class="card-title">Total Rs 0.00/=</h4>
-                <div class="row g-3">
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Cash" aria-label="City">
-                    </div>
-                    <div class="col-sm">
-                        <input type="text" class="form-control" placeholder="Balance" aria-label="State">
-                    </div>
-                    <div class="col-sm">
-                        <input type="text" class="form-control" placeholder="Discount" aria-label="Zip">
+            <!-- Right: Item Select -->
+            <div class="col-12 col-xl-6">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title" style="background-color: #f80a81">Item Select</h5>
+
+                        <div class="mb-3">
+                            <label class="form-label">Item</label>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border:1px solid #dfdddd"></button>
+                                <ul class="dropdown-menu">
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputItemCode" class="form-label">Item Code</label>
+                            <input type="text" class="form-control" id="exampleInputItemCode">
+                        </div>
+
+                        <div class="d-flex gap-3">
+                            <div class="mb-3 flex-fill">
+                                <label for="exampleInputItemNme" class="form-label">Item Name</label>
+                                <input type="text" class="form-control" id="exampleInputItemNme">
+                            </div>
+                            <div class="mb-3 flex-fill">
+                                <label for="exampleInputPrice" class="form-label">Price</label>
+                                <input type="text" class="form-control" id="exampleInputPrice">
+                            </div>
+                            <div class="mb-3 flex-fill">
+                                <label for="exampleInputQty" class="form-label">Quantity On Hand</label>
+                                <input type="number" class="form-control" id="exampleInputQty">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputOrderQty" class="form-label">Order Quantity</label>
+                            <input type="number" class="form-control" id="exampleInputOrderQty">
+                        </div>
+
+                        <button type="button" class="btn btn-danger">Add Item</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <br>
+        <div class="card mt-3" style="background-color: #dfdddd;">
+            <div class="card-body">
+                <h4 class="card-title">Total Rs 0.00/=</h4>
+                <h4 class="card-title">Sub Total Rs 0.00/=</h4>
 
-        <button type="button" class="btn btn-warning">Clear</button>
-        <button type="button" class="btn btn-success">Renew Order</button>
-        <button class="btn btn-primary" type="submit">Submit Order</button>
+                <div class="row g-3">
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" placeholder="Cash" aria-label="Cash">
+                    </div>
+                    <div class="col-sm">
+                        <input type="text" class="form-control" placeholder="Discount" aria-label="Discount">
+                    </div>
+                    <div class="col-sm">
+                        <input type="text" class="form-control" placeholder="Balance" aria-label="Balance">
+                    </div>
+                </div>
 
+                <br>
+                <button type="button" class="btn btn-success" id="purchase-btn" style="width: 100px;">Purchase</button>
+            </div>
+        </div>
 
+        <!-- Order Items Table -->
+        <div class="mt-3">
+            <table class="table table-bordered border-secondary">
+                <thead>
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+                <tbody id="order-tbody">
+                <!-- Dynamically added items go here -->
+                </tbody>
+            </table>
+        </div>
     </form>
 </section>
 
 
-<script src="../lib/jquery-3.7.1.min.js"></script>
+
+<script src="assets/lib/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="controller/CustomerController.js"></script>
+<script type="module" src="controller/ItemController.js"></script>
+<script type="module" src="controller/OrderController.js"></script>
+<script type="module" src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 <script>
     $("#customer_content").css("display", "none");
+    $("#item_content").css("display", "none");
+    $("#order_content").css("display", "none");
+
+    $("#home_nav").on('click', function () {
+        $("#home_content").css("display", "block");
+        $("#customer_content").css("display", "none");
+        $("#order_content").css("display", "none");
+        $("#item_content").css("display", "none");
+    })
 
     $("#customer_nav").on('click', function () {
         $("#customer_content").css("display", "block");
         $("#home_content").css("display", "none");
+        $("#order_content").css("display", "none");
+        $("#item_content").css("display", "none");
     })
 
+    $("#item_nav").on('click', function () {
+        $("#item_content").css("display", "block");
+        $("#home_content").css("display", "none");
+        $("#customer_content").css("display", "none");
+        $("#order_content").css("display", "none");
+    })
+
+    $("#order_nav").on('click', function () {
+        $("#order_content").css("display", "block");
+        $("#home_content").css("display", "none");
+        $("#customer_content").css("display", "none");
+        $("#item_content").css("display", "none");
+    })
+
+    $("#customer_dropdown").on('click', function () {
+        $("#customer_content").css("display", "block");
+        $("#home_content").css("display", "none");
+        $("#order_content").css("display", "none");
+        $("#item_content").css("display", "none");
+    })
+
+    $("#customer_div").on('click', function () {
+        $("#customer_content").css("display", "block");
+        $("#home_content").css("display", "none");
+        $("#order_content").css("display", "none");
+        $("#item_content").css("display", "none");
+    })
+
+    $("#item_div").on('click', function () {
+        $("#item_content").css("display", "block");
+        $("#home_content").css("display", "none");
+        $("#order_content").css("display", "none");
+        $("#customer_content").css("display", "none");
+    })
+
+    $("#order_div").on('click', function () {
+        $("#order_content").css("display", "block");
+        $("#home_content").css("display", "none");
+        $("#customer_content").css("display", "none");
+        $("#item_content").css("display", "none");
+    })
 
 </script>
 
 </body>
 </html>
+
+
